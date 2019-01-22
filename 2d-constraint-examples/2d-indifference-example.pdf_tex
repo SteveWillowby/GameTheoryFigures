@@ -49,6 +49,6 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.75)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{figures/2d-constraint-example.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{figures/2d-indifference-example.pdf}}%
   \end{picture}%
 \endgroup%
