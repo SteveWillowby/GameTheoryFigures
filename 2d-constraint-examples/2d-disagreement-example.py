@@ -19,20 +19,28 @@ def newline(p1, p2):
     ax.add_line(l)
     return l
 
+
+def newsegment(p1, p2):
+    ax = plt.gca()
+    l = mlines.Line2D([p1[0],p2[0]], [p1[1],p2[1]], color='gray', linestyle='--', linewidth=1.0)
+    ax.add_line(l)
+    return l
+
+
 plt.scatter(points_x, points_y, c='green', #marker='s',
             label='Potential\nOutcomes')
 # newline([-0.5,0],[-0.5,1])
-newline([9.5,0],[9.5,1])
-newline([10.5,0],[10.5,1])
-newline([11.5,0],[11.5,1])
-newline([14.5,0],[14.5,1])
-newline([31.5,0],[31.5,1])
+newsegment([9.5,-0.5],[9.5,10.5])
+newsegment([10.5,9.5],[10.5,11.5])
+newsegment([11.5,10.5],[11.5,14.5])
+newsegment([14.5,11.5],[14.5,23.5])
+newsegment([31.5,14.5],[31.5,30.5])
 
-newline([0,9.5],[1,9.5])
-newline([0,10.5],[1,10.5])
-newline([0,11.5],[1,11.5])
-newline([0,14.5],[1,14.5])
-newline([0,23.5],[1,23.5])
+newsegment([-1.5,9.5],[10.5,9.5])
+newsegment([9.5,10.5],[11.5,10.5])
+newsegment([10.5,11.5],[14.5,11.5])
+newsegment([11.5,14.5],[31.5,14.5])
+newsegment([14.5,23.5],[41.5,23.5])
 # plt.suptitle('Transitivity of Disagreement Equality')
 # plt.title('When Utilities are Unique')
 plt.xlabel('Utility of Agent 1')
